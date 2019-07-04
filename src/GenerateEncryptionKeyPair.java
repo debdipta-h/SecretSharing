@@ -20,7 +20,7 @@ public class GenerateEncryptionKeyPair {
     }
 
 
-    public void createKeyPar(String algorithm, int keyLength) {
+    public void createKeyPair(String algorithm, int keyLength) {
         try {
             getKeyPairGeneratorInstance(algorithm, keyLength);
             this.keyPair = this.keyPairGenerator.generateKeyPair();
