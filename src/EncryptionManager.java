@@ -25,8 +25,8 @@ public class EncryptionManager {
         String decryptedP_msg = cryptography.decryptMessage(encrypted_msg, generator.getPrivateKey());
         System.out.println(decryptedP_msg);
         KeyManager keyManager=new KeyManager(generator.getPrivateKey(),generator.getPublicKey());
-        System.out.println("privateKey:"+keyManager.getPrivateKeyModulus()+" "+keyManager.getPrivateKeyExponent());
-        System.out.println("publicKey:"+keyManager.getPublicKeyModulus()+" "+keyManager.getPublicKeyExponent());
+        BigInteger modulus=keyManager.getPrivateKeyModulus();
+        BigInteger privateExponent= keyManager.getPrivateKeyExponent();
 
     }
 }
