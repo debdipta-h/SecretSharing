@@ -27,6 +27,8 @@ public class EncryptionManager {
         KeyManager keyManager=new KeyManager(generator.getPrivateKey(),generator.getPublicKey());
         BigInteger modulus=keyManager.getPrivateKeyModulus();
         BigInteger privateExponent= keyManager.getPrivateKeyExponent();
+        System.out.println(privateExponent.toString());
+        System.out.println(privateExponent.toString()+"@"+modulus.toString());
 
     }
 }
